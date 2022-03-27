@@ -10,13 +10,15 @@ class TopListItem extends StatelessWidget {
     const double height = 250;
 
     return SizedBox(
+
       height: height,
       child: Row(
+        mainAxisSize: MainAxisSize.min,
         children: [
           SvgPicture.asset("assets/numbers/$index.svg",
               fit: BoxFit.fitHeight, height: height),
           Transform.translate(
-              offset: const Offset(-40, 0),
+              offset: const Offset(-30, 0),
               child: Image.asset("assets/thumbnails/thumb1.jpg"))
         ],
       ),
